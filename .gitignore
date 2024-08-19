@@ -132,5 +132,9 @@ dist
 # Data
 data.json
 
-# Anything hidden...
-.*
+.npmrc
+.editorconfig
+.eslintignore
+.eslintrc
+old
+.DS_STORE
