@@ -1,0 +1,16 @@
+{
+	"id": "perplexity-chat-plugin",
+	"name": "Perplexity Chat",
+	"version": "1.0.0",
+	"description": "A plugin to chat with Perplexity AI models.",
+	"author": "Adam Nguyen",
+	"authorUrl": "https://buymeacoffee.com/adamsnguyen",  
+	"minAppVersion": "0.12.0",
+	"main": "main.ts",
+	"styles": "styles.css", 
+	"keywords": ["plugin", "AI", "chat"],
+	"dependencies": {
+	  "@api/pplx": "^1.0.0",
+	  "marked": "^14.0.0" 
+	}
+}

@@ -1,0 +1,78 @@
+.perplexity-chat-container {
+    height: calc(100vh - 200px); /* Adjust maximum height for messages */
+    overflow-y: auto; /* Enable vertical scrolling for overflow messages */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.perplexity-chat-message {
+    user-select: text; /* Allow text selection */
+    position: relative; /* This makes the parent a reference point for absolute positioning */
+    padding: 10px;
+    margin: 5px 0;
+    color: black;
+    border-radius: 5px;
+    width: 100%; /* Ensure messages fill the width */
+}
+
+.perplexity-chat-message.user {
+    background-color: #e0f7fa; /* Light blue for user message */
+}
+
+.perplexity-chat-message.bot {
+    background-color: #ffe0b2; /* Light orange for bot message */
+}
+
+.message-content {
+    overflow: hidden; /* Prevent overflow */
+    white-space: pre-wrap; /* Maintain whitespace and newlines */
+}
+
+.perplexity-copy-btn {
+    margin-top: 10px; /* Space above the copy button */
+    width: 100%; /* Make the button fill the width of the parent */
+    padding: 10px; /* Adequate padding for user interaction */
+    background-color: #6200ea; /* Dark purple background */
+    color: black; /* Black text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.perplexity-copy-btn:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+}
+
+.input-wrapper {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Optional spacing from chat container */
+}
+
+.perplexity-chat-input {
+    flex: 1; /* Make the input fill available space */
+    padding: 10px; /* Padding for comfort */
+    margin-right: 5px; /* Space between input and buttons */
+    height: 40px; /* Set a fixed height for consistency */
+    resize: none; /* Prevent manual resizing */
+    min-height: 40px; /* Ensure there's a minimum height for visibility */
+}
+
+.perplexity-send-button {
+    height: 40px; /* Set same height as input */
+    padding: 10px; /* Adequate padding for user interaction */
+    background-color: #6200ea; /* Dark purple background */
+    color: black; /* Black text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.perplexity-send-button:hover {
+    background-color: #3700b3; /* Darker purple on hover */
+}
