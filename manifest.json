@@ -6,7 +6,7 @@
 	"author": "Adam Nguyen",
 	"authorUrl": "https://buymeacoffee.com/adamsnguyen",  
 	"minAppVersion": "0.12.0",
-	"main": "main.ts",
+	"main": "main.js",
 	"styles": "styles.css", 
 	"keywords": ["plugin", "AI", "chat"],
 	"dependencies": {
