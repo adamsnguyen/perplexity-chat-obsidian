@@ -1,96 +1,59 @@
-# Obsidian Sample Plugin
+# Perplexity Chat Obsidian Plugin
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+![alt text](assets/ppl-plugin-demo.png)
 
-This project uses TypeScript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in TypeScript Definition format, which contains TSDoc comments describing what it does.
+A powerful plugin for Obsidian that integrates with the Perplexity API, enabling users to generate and interact with AI-driven responses directly from their notes. Enhance your note-taking experience with conversational AI capabilities seamlessly integrated into your workflow.
 
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
+## Features
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+- **Chat Interface**: Engage in a chat-like interface to interact with the AI.
+- **Dynamic Settings**: Customize your AI interaction with adjustable settings, including:
+  - **API Key**: Securely store your API key for the Perplexity API.
+  - **Model Selection**: Choose from various AI models to suit your needs.
+  - **Temperature**: Adjust response randomness for more creative or deterministic outputs.
+  - **Presence Penalty**: Control how much new content is favored in responses.
+  - **Max Tokens**: Set the maximum number of tokens in the AI's responses.
+  - **Custom System Prompt**: Define the initial input for the system to tailor its behavior.
 
-## First time developing plugins?
+## Installation
 
-Quick starting guide for new plugin devs:
+1. In Obsidian, open the **Settings**.
+2. Navigate to the **Community plugins** section 
+3. Click on **Install plugin** and select the downloaded file or paste the plugin's GitHub URL to install.
+4. Enable the plugin after installation.
 
-- Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+## Usage
 
-## Releasing new releases
+1. **Open the Plugin**: Use the ribbon icon or the command palette (Ctrl/Cmd + P) to activate the Perplexity Chat.
+2. **Configure Settings**: Go to the settings tab to enter your API key and customize model and interaction parameters.
+3. **Start a Conversation**: Type your message in the chat input area and hit enter or click send. You can engage with the bot and receive AI-generated responses directly.
+4. **Copy Messages**: Easily copy messages from the chat to share or store in your notes.
 
-- Update your `manifest.json` with your new version number, such as `1.0.1`, and the minimum Obsidian version required for your latest release.
-- Update your `versions.json` file with `"new-plugin-version": "minimum-obsidian-version"` so older versions of Obsidian can download an older version of your plugin that's compatible.
-- Create new GitHub release using your new version number as the "Tag version". Use the exact version number, don't include a prefix `v`. See here for an example: https://github.com/obsidianmd/obsidian-sample-plugin/releases
-- Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
-- Publish the release.
+## Customizations
 
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
-> The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
+- You can adjust model parameters in the settings to influence the style and length of the responses.
+- The custom system prompt allows you to set distinctive guidelines for the AI's behavior to match specific needs.
 
-## Adding your plugin to the community plugin list
+## Troubleshooting
 
-- Check the [plugin guidelines](https://docs.obsidian.md/Plugins/Releasing/Plugin+guidelines).
-- Publish an initial version.
-- Make sure you have a `README.md` file in the root of your repo.
-- Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
+If you run into issues:
 
-## How to use
+- Ensure your API key is valid and has permissions to access the Perplexity API.
+- Check the network connection to ensure the plugin can reach the API endpoint.
+- Review the console for errors if the plugin does not behave as expected (use `F12` to open developer tools).
 
-- Clone this repo.
-- Make sure your NodeJS is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
-- `npm run dev` to start compilation in watch mode.
+## Contributing
 
-## Manually installing the plugin
+Contributions to enhance the plugin are welcome! If you have suggestions, bug reports, or would like to contribute code, please open an issue or submit a pull request on the GitHub repository.
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
+## License
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
+This plugin is licensed under the [MIT License]
 
-## Funding URL
+## Contact
 
-You can include funding URLs where people who use your plugin can financially support it.
+For questions, suggestions, or support, please reach out via [GitHub Issues]
 
-The simple way is to set the `fundingUrl` field to your link in your `manifest.json` file:
+---
 
-```json
-{
-    "fundingUrl": "https://buymeacoffee.com"
-}
-```
-
-If you have multiple URLs, you can also do:
-
-```json
-{
-    "fundingUrl": {
-        "Buy Me a Coffee": "https://buymeacoffee.com",
-        "GitHub Sponsor": "https://github.com/sponsors",
-        "Patreon": "https://www.patreon.com/"
-    }
-}
-```
-
-## API Documentation
-
-See https://github.com/obsidianmd/obsidian-api
+This README was generated to assist users in understanding how to effectively use the Perplexity Chat plugin for Obsidian. Enjoy leveraging the power of AI in your note-taking!
