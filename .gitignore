@@ -140,3 +140,4 @@ old
 .DS_STORE
 esbuild.config.mjs
 version-bump.mjs
+main.js
